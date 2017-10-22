@@ -1,4 +1,5 @@
 import React from 'react';
+import CameraControlStyles from './CameraControls.scss';
 
 const CameraControls = (props) => {
   return (
