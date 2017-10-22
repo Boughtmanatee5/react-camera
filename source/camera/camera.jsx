@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CameraDisplay from './CameraDisplay.jsx';
+import CameraDisplay from './CameraDisplay';
+import CameraControls from './CameraControls';
 
 class Camera extends Component {
   constructor(props) {
@@ -13,7 +14,12 @@ class Camera extends Component {
       .then(videoStream => this.setState({ videoStream }));
   }
   render() {
-    return (<CameraDisplay stream={this.state.videoStream} />);
+    return (
+      <div className="camera">
+        <CameraDisplay stream={this.state.videoStream} />
+        <CameraControls />
+      </div>
+    );
   }
 }
 
